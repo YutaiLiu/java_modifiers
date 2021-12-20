@@ -4,30 +4,66 @@ import publicClasses.Animal;
 
 class Frog extends Animal {
 
-    private final static double LIFESPAN = 120.0;
-    double speed;
+    private final static int LIFESPAN = 12;
 
     Frog() {
-        this.species = "Frog";
-        this.speed = 1.0;
-        this.age = 1.0;
+        super();
+        this.species = "FROG";
+        introduction();
     }
 
-    Frog(double l, double h, double m) {
-        this.length = l;
-        this.height = h;
-        this.mass = m;
+    Frog(int age) {
+        super();
+        this.species = "FROG";
+        if (setAge(age)) {
+            introduction();
+        } else {
+            System.out.println("Frog can not live that long.");
+        }
     }
 
-    void setLength(double l) {
-        this.length = l;
+    public boolean setAge(int age) {
+        if (!this.isAlive) {
+            System.out.println("This frog is died.");
+            return false;
+        }
+        if (age >= this.LIFESPAN) {
+            this.isAlive = false;
+            return false;
+        }
+        this.ageInMonth = age;
+        return true;
     }
 
-    void setHight(double h) {
-        this.height = h;
+    public void growUp(int time) {
+        if (!this.isAlive) {
+            System.out.println("This frog is died.");
+            return ;
+        }
+        if (!setAge(this.ageInMonth + time)) {
+            System.out.println("This frog is too old to live.");
+            return ;
+        }
+        this.size += 0.5 * time;
+        this.mass += 0.1 * time;
+        this.speed += 5 * time;
+        introduction();
     }
 
-    void setMass(double m) {
-        this.mass = m;
+    public void eat(Fly fly) {
+        if (!this.isAlive) {
+            System.out.println("This frog is died.");
+            return ;
+        }
+
+        if (this.speed >= fly.getSpeed()) {
+            System.out.println("Frog caught the fly.");
+        } else {
+            System.out.println("Fly is too fast, frog need grow up to catch this fly.");
+        }
+    }
+
+    public void introduction() {
+        System.out.println("This is a " + this.species + " obj, " + this.size + " inches big, " + this.mass + " lb weight, " + this.ageInMonth + " month old, " + this.speed + " mph fast, " + this.LIFESPAN + " month lifespan.");
     }
 }
