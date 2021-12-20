@@ -2,17 +2,17 @@ package defaultClasses;
 
 import publicClasses.Animal;
 
-class Frog extends Animal {
+public class Frog extends Animal {
 
     private final static int LIFESPAN = 12;
 
-    Frog() {
+    public Frog() {
         super();
         this.species = "FROG";
         introduction();
     }
 
-    Frog(int age) {
+    public Frog(int age) {
         super();
         this.species = "FROG";
         if (setAge(age)) {
@@ -57,7 +57,8 @@ class Frog extends Animal {
         }
 
         if (this.speed >= fly.getSpeed()) {
-            System.out.println("Frog caught the fly.");
+            fly.getEaten();
+            System.out.println("Frog caught the fly. this fly got eaten.");
         } else {
             System.out.println("Fly is too fast, frog need grow up to catch this fly.");
         }

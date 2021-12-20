@@ -6,13 +6,13 @@ public class Fly extends Animal {
 
     private final static int LIFESPAN = 6;
 
-    Fly() {
+    public Fly() {
         super();
         this.species = "FLY";
         introduction();
     }
 
-    Fly(int age) {
+    public Fly(int age) {
         super();
         this.species = "FLY";
         if (!setAge(age)) {
@@ -49,7 +49,11 @@ public class Fly extends Animal {
         this.speed += 10 * time;
     }
 
+    public void getEaten() {
+        this.isAlive = false;
+    }
+
     public void introduction() {
-        System.out.println("This is a " + this.species + " obj, " + this.size + " inches big, " + this.mass + " lb weight, " + this.ageInMonth + " month old, " + this.speed + " mph fast.");
+        System.out.println("This is a " + this.species + " obj, " + this.size + " inches big, " + this.mass + " lb weight, " + this.ageInMonth + " month old, " + this.speed + " mph fast, " + this.LIFESPAN + " month lifespan.");
     }
 }

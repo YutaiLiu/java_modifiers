@@ -1,5 +1,11 @@
+import defaultClasses.Fly;
+import defaultClasses.Frog;
+
 class main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Frog firstFrog = new Frog();
+        Fly firstFly = new Fly();
+        firstFrog.eat(firstFly);
+        firstFly.growUp(1);
     }
 }
