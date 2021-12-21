@@ -1,6 +1,11 @@
-package defaultClasses;
+package MainKind;
 
-import publicClasses.Animal;
+import Animal.Animal;
+
+//Because fly is a kind of Animal, so it should inherit abstract class Animal
+//and implement abstract method in it
+//because class Fly is default class, means it can not be used outside of its package
+//so, to instantiate it, we will need another public class to extend class Fly
 
 public class Fly extends Animal {
 
@@ -8,13 +13,11 @@ public class Fly extends Animal {
 
     public Fly() {
         super();
-        this.species = "FLY";
         introduction();
     }
 
     public Fly(int age) {
         super();
-        this.species = "FLY";
         if (!setAge(age)) {
             System.out.println("Fly can not live that long.");
         } else {

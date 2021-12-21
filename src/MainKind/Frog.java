@@ -1,15 +1,13 @@
-package defaultClasses;
+package MainKind;
 
-import publicClasses.Animal;
+import Animal.Animal;
 
 public class Frog extends Animal {
 
-    private final static int LIFESPAN = 12;
+    public final static int LIFESPAN = 12;
 
     public Frog() {
         super();
-        this.species = "FROG";
-        introduction();
     }
 
     public Frog(int age) {

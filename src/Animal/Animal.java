@@ -1,4 +1,14 @@
-package publicClasses;
+package Animal;
+
+//As upper level concept, you can use abstract class or interface to represent
+//the difference between logic of abstract class and interface is:
+//abstract class represent a "... is ..." logic, e.g. Fly is Animal, so Animal could be abstract class and Fly should extend it
+//interface represent s "... like ..." logic, e.g. Fly like airplane, then airplane could be designed as an interface and left Fly implement it
+
+
+//the main differences between abstract class and non-abstract class are
+//1. abstract could contain abstract method, non-abstract class couldn't
+//2. abstract can not be instantiated
 
 public abstract class Animal {
 
