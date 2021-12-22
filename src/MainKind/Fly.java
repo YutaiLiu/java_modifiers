@@ -1,41 +1,28 @@
 package MainKind;
 
+import Airplane.Airplane;
 import Animal.Animal;
 
 //Because fly is a kind of Animal, so it should inherit abstract class Animal
-//and implement abstract method in it
-//because class Fly is default class, means it can not be used outside of its package
-//so, to instantiate it, we will need another public class to extend class Fly
+//and implement abstract method in it, if class Fly didn't implement all abstract method in Animal
+//you must define class Fly as abstract class as well (current situation)
 
-public class Fly extends Animal {
+//And because fly is like an airplane, so it does make sense that it could implement an Airplane interface
 
-    private final static int LIFESPAN = 6;
+public abstract class Fly extends Animal implements Airplane {
 
+    public static final int LIFESPAN = 6;
+
+    //depends on different situation, constructor could be public or default method
     public Fly() {
         super();
-        introduction();
     }
 
     public Fly(int age) {
         super();
         if (!setAge(age)) {
             System.out.println("Fly can not live that long.");
-        } else {
-            introduction();
         }
-    }
-
-    public boolean setAge(int age) {
-        if (!this.isAlive) {
-            System.out.println("This fly is died.");
-            return false;
-        }
-        if (age >= this.LIFESPAN) {
-            this.isAlive = false;
-            return false;
-        }
-        this.ageInMonth = age;
-        return true;
     }
 
     public void growUp(int time) {
@@ -50,13 +37,26 @@ public class Fly extends Animal {
         this.size += 0.01 * time;
         this.mass += 0.01 * time;
         this.speed += 10 * time;
+        introduction();
     }
 
-    public void getEaten() {
+    //define as private method, cause it an internal computing method, should not be reachable from outside
+    private boolean setAge(int age) {
+        if (!this.isAlive) {
+            System.out.println("This fly is died.");
+            return false;
+        }
+        if (age >= LIFESPAN) {
+            this.isAlive = false;
+            return false;
+        }
+        this.ageInMonth = age;
+        return true;
+    }
+
+    //define as default method, cause it will only be used in class Frog which sit in the same package
+    void gotEaten() {
         this.isAlive = false;
     }
 
-    public void introduction() {
-        System.out.println("This is a " + this.species + " obj, " + this.size + " inches big, " + this.mass + " lb weight, " + this.ageInMonth + " month old, " + this.speed + " mph fast, " + this.LIFESPAN + " month lifespan.");
-    }
 }

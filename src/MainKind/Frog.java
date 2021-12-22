@@ -2,30 +2,32 @@ package MainKind;
 
 import Animal.Animal;
 
-public class Frog extends Animal {
+//Because Frog is a kind of animal, so it does make sense that class Frog extends class Animal
+//But because class Frog didn't implement all abstract method in Animal
+//So class Frog has to be defined as abstract as well
+
+public abstract class Frog extends Animal {
 
     public final static int LIFESPAN = 12;
 
+    //depends on different situation, constructor could be public or default method
     public Frog() {
         super();
     }
 
     public Frog(int age) {
         super();
-        this.species = "FROG";
-        if (setAge(age)) {
-            introduction();
-        } else {
+        if (!setAge(age)) {
             System.out.println("Frog can not live that long.");
         }
     }
 
-    public boolean setAge(int age) {
+    private boolean setAge(int age) {
         if (!this.isAlive) {
             System.out.println("This frog is died.");
             return false;
         }
-        if (age >= this.LIFESPAN) {
+        if (age >= LIFESPAN) {
             this.isAlive = false;
             return false;
         }
@@ -54,15 +56,17 @@ public class Frog extends Animal {
             return ;
         }
 
+        if (!fly.isAlive()) {
+            System.out.println("This fly has already been eaten.");
+            return ;
+        }
+
         if (this.speed >= fly.getSpeed()) {
-            fly.getEaten();
-            System.out.println("Frog caught the fly. this fly got eaten.");
+            fly.gotEaten();
+            System.out.println("Frog caught the fly. this fly is eaten.");
         } else {
             System.out.println("Fly is too fast, frog need grow up to catch this fly.");
         }
     }
 
-    public void introduction() {
-        System.out.println("This is a " + this.species + " obj, " + this.size + " inches big, " + this.mass + " lb weight, " + this.ageInMonth + " month old, " + this.speed + " mph fast, " + this.LIFESPAN + " month lifespan.");
-    }
 }

@@ -1,5 +1,7 @@
 import Animal.Animal;
+import MainKind.Fly;
 import MainKind.Frog;
+import Species.DomesticFly;
 import Species.GardenFrog;
 
 //Visibility
@@ -9,7 +11,8 @@ import Species.GardenFrog;
 //no modifier	Y	    Y	    N	        N
 //private	    Y	    N	    N	        N
 
-//Field&Method modifier (member level): public, protected, default, private, static, final
+//                          Field&Method modifier (member level):
+//                  public, protected, default, private, static, final
 //public: field can be accessed to all classes, no getter and setter method needed
             // careful to use, cause it's easy to be changed
 //protected: access level lower than public，specifies that
@@ -30,34 +33,85 @@ import Species.GardenFrog;
                             //can only access class variable and class method
                             //can't access instance variable or instance method because they must use an object reference.
                             // Also, class methods cannot use the "this" keyword as there is no instance for "this" to refer to.
-//final: also known as "contant variable", will work with static at the same time, like "static final double PI = 3.1415926"
+//final: also known as "content variable", will work with static at the same time, like "static final double PI = 3.1415926"
             //final variable has to be initialized at the first second, and behavior like constant variable, immutable
 
-//Class modifier (top-level): public, default
+//                          Class modifier (top-level):
+//                  public, default
 //public class: can be extended in other packages, reachable out of package
 //default class: package-private class
 
+// Project Structure
+// package Animal:                      public abstract class Animal + default class Creature
+//                                                  /                     \
+//                                                 /                       \
+// package MainKind:            public abstract class Frog              public abstract class Fly
+//                                          |                                       |
+//                                          |                                       |
+// package Species:             public class GardenFrog                 public class DomesticFly
+
+
+//As upper level concept, you can use abstract class or interface to represent
+//the difference between logic of abstract class and interface is:
+//abstract class represent a "... is ..." logic, e.g. Fly is Animal, so Animal could be abstract class and Fly should extend it
+//interface represent s "... like ..." logic, e.g. Fly like airplane, then airplane could be designed as an interface and left Fly implement it
+
+//the main differences between abstract class and non-abstract class are
+//1. abstract could contain abstract method, non-abstract class couldn't
+//2. abstract can not be instantiated
+
+//
 class main {
     public static void main(String[] args) {
-        //class Frog and Fly can not be used here, because they are default class
-        //which means they are only available in their package
-        //unless they are public class
-        //Frog firstFrog = new Frog();
-        //Fly firstFly = new Fly();
+        //Because Animal, Frog and Fly are abstract classes, to instantiate it
+        //You must extend them as a non-abstract class, like GardenFrog and DomesticFly
 
-        //GardenFrog is public class and inherit Frog class
-        GardenFrog gFrog = new GardenFrog();
+        // Because you define obj firstFrog and firstFly as an Animal reference
+        // you can only access the methods in Animal class
+        // (of course include abstract method implemented by sub-class), like Animal.introduction()
+        Animal firstFrog = new GardenFrog();
+        Animal firstFly = new DomesticFly();
+        System.out.println("-------------------Instantiate obj with Animal Reference-------------------");
+        firstFrog.introduction();
+        firstFly.introduction();
+        // except method define out of Animal, like
+        //firstFrog.eat();
 
-        System.out.println(GardenFrog.color);
+        // Because you define secondFrog and secondFly as Frog and Fly reference
+        // you can only access the methods implemented in those classes, like Frog.eat() and Fly.gotEaten()
+        Frog secondFrog = new GardenFrog();
+        Fly secondFly = new DomesticFly();
+        System.out.println("-------------------Frog.eat()-------------------");
+        secondFrog.eat(secondFly);
+        System.out.println("Is this fly still alive? " + secondFly.isAlive());
+
+        //define GardenFrog obj with GardenFrog reference will have access to all fields and methods
+        //so does DomesticFly
+        GardenFrog thirdFrog = new GardenFrog();
+        DomesticFly thirdFly = new DomesticFly();
+
+        // Although Frog.eat() need an Fly obj as parameter
+        // but DomesticFly obj is also valid, because DomesticFly extends Fly
+        System.out.println("-------------------Use Frog.eat() in Sub-class-------------------");
+        secondFrog.eat(thirdFly);
+        System.out.println("Is this fly still alive? " + thirdFly.isAlive());
+        thirdFrog.eat(thirdFly);
+
+        // This is the right way to use class variable, ClassName.VariableName
+        // so do class methods, ClassName.MethodName
+        System.out.println("-------------------Class Variable-------------------");
+        System.out.println(GardenFrog.COLOR);
         System.out.println(Frog.LIFESPAN);
+        System.out.println(Fly.NUMOFWINGS);
+        System.out.println(DomesticFly.NUMOFWINGS);
 
-        //You can instantiate GradenFrog obj with Animal reference
-        Animal frog = new GardenFrog();
-        //But you can only access the non-abstract method in Animal class
-        //you have non-access to methods or fields extended in sub-class
-        //like method Frog.eat() or GradenFrog.color
-        //frog.eat();
-        System.out.println(frog.getAge());
+        //When multiple methods has the same name in the heritage chain, to void conflict
+        //compile will look it up in reference class
+        System.out.println("-------------------When Sub-class has same name method with Super-class-------------------");
+        System.out.println(secondFrog.getSpeed());
+        //Like here, compiler will look at class GardenFrog, because thirdFrog' reference type is GardenFrog
+        System.out.println(thirdFrog.getSpeed(1));
+
 
 
     }
