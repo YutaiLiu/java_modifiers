@@ -2,6 +2,9 @@ package Species;
 
 import MainKind.Fly;
 
+//To extend an abstract class, you have to implement all abstract method
+//and you can add new fields and non-abstract methods in sub-class
+
 public class DomesticFly extends Fly {
 
     //constant class variable
