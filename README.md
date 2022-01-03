@@ -1,2 +1,11 @@
-# java_modifiers
-An example project which will cover all java modifiers
+# Java Modifiers
+## Class Modifiers (Top-level)
+- public
+- "No modifier" (default)
+- final
+
+### Visibility
+| Modifier | Class | Package | Subclass | World |
+| --- | --- | --- | --- | --- |
+| public | Y | Y | Y | Y |
+| no modifier | Y | Y | N | N |
