@@ -28,8 +28,10 @@ public abstract class Animal extends Creature {
         return this.isAlive;
     }
 
+    //Use this method to let obj grow-up, different species should have different grow-ratio
     public abstract void growUp(int time);
 
+    //print detail information of obj
     public abstract void introduction();
 
 }
