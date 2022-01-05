@@ -5,7 +5,7 @@ import MainKind.Frog;
 //To extend an abstract class, you have to implement all abstract method
 //and you can add new fields and non-abstract methods in sub-class
 
-public class GardenFrog extends Frog {
+public final class GardenFrog extends Frog {
 
     //constant class variable
     public static final String COLOR = "Green";
