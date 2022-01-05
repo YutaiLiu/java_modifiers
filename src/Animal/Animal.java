@@ -6,6 +6,7 @@ public abstract class Animal extends Creature {
 
     public Animal() {
         super();
+        this.speed = 0;
     }
 
     public double getSize() {

@@ -51,11 +51,12 @@
 - e.g. variable **speed** in class **Animal**, we should use this only in some common super-class that cross different packages.
 ### "No modifier"
 - access level lower than protected, like "package-private", can not be access from other package.
-- e.g. constructor method of class **Creature**
+- e.g. constructor method of class **Creature**, and method **gotEaten()** in class **Fly**
 ### private
 - field can be only accessed in its class, can only access with getter and setter from outside most of time you should define most variable as private, unless you have good reason not to.
 - Some exceptions: fields and methods need to be inherit by sub-class, constructor method, class member (static variable and static method)
 - **private method can not be overridden**
+- e.g. method **setAge()** in class **Fly**
 ### static
 - also known as "class level", you can define class variable and class method with this modifier. Computer will only store one copy in memory, you even do not need an obj exist all instantiated class obj will share it, save your RAM. you should define common message or features as static because they won't be different between different obj.
   - class variable: 
@@ -89,6 +90,9 @@ As a sub-level interface, it can extend one or multiple interfaces.
 
 ### Special case: Nested class
 A class nested in another class called nested class, to be even more special, it could be static. A static nested class is called static nested class, which can only access static member, otherwise it will be called inner class, which can access all members include private member (cause inner class is also part of outer class).
+
+### Override
+Please refer to comments around method **getSpeed()** in class **GardenFrog**
 
 ## Abstract Class & Interface
 

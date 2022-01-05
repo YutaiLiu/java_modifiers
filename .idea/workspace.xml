@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f28e06c8-9bbd-48cd-8f2c-4c897121d74d" name="Default Changelist" comment="Merge branch 'v2-something-new' of https://github.com/YutaiLiu/java_modifiers into v2-something-new&#10;&#10;# Conflicts:&#10;#&#9;README.md">
-      <change beforePath="$PROJECT_DIR$/src/Species/DomesticFly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Species/DomesticFly.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Species/GardenFrog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Species/GardenFrog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Airplane/Airplane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Airplane/Airplane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Animal/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Animal/Creature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainKind/Fly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainKind/Fly.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +29,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="-465">
               <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="95" selection-start-line="95" selection-end-line="95" />
             </state>
           </provider>
         </entry>
@@ -63,16 +73,16 @@
         <option value="$PROJECT_DIR$/src/species/Frog.java" />
         <option value="$PROJECT_DIR$/src/species/GardenFrog.java" />
         <option value="$PROJECT_DIR$/src/MainKind/GardenFrog.java" />
-        <option value="$PROJECT_DIR$/src/Airplane/Airplane.java" />
-        <option value="$PROJECT_DIR$/src/MainKind/Fly.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/MainKind/Frog.java" />
-        <option value="$PROJECT_DIR$/src/Animal/Creature.java" />
         <option value="$PROJECT_DIR$/src/Species/GardenFrog.java" />
         <option value="$PROJECT_DIR$/src/Animal/Animal.java" />
         <option value="$PROJECT_DIR$/src/Species/DomesticFly.java" />
         <option value="$PROJECT_DIR$/src/main.java" />
+        <option value="$PROJECT_DIR$/src/Airplane/Airplane.java" />
+        <option value="$PROJECT_DIR$/src/Animal/Creature.java" />
+        <option value="$PROJECT_DIR$/src/MainKind/Fly.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -262,9 +272,9 @@
       <window_info id="Favorites" sideWeight="0.50089765" side_tool="true" weight="0.24964234" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49910232" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="1" sideWeight="0.50089765" side_tool="true" weight="0.24964234" />
-      <window_info anchor="bottom" id="Version Control" sideWeight="0.49499285" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.4899857" visible="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.5100143" side_tool="true" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Version Control" sideWeight="0.49427754" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" sideWeight="0.4892704" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.5107296" side_tool="true" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Messages" sideWeight="0.4985694" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49928468" weight="0.32891566" />
@@ -369,23 +379,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/src/Airplane/Airplane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Species/GardenFrog.java">
+    <entry file="file://$PROJECT_DIR$/src/Animal/Creature.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="285">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Animal/Animal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainKind/Fly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-203">
+          <caret line="15" column="82" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainKind/Frog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="-413">
           <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
         </state>
       </provider>
@@ -397,37 +421,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Animal/Creature.java">
+    <entry file="file://$PROJECT_DIR$/src/Species/GardenFrog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="-216">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Animal/Animal.java">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Airplane/Airplane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainKind/Fly.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="13" column="36" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="36" />
+        <state relative-caret-position="260">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
+        <state relative-caret-position="-465">
           <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
         </state>
       </provider>
