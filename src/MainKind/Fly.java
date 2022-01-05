@@ -5,7 +5,7 @@ import Animal.Animal;
 
 //Because fly is a kind of Animal, so it should inherit abstract class Animal
 //and implement abstract method in it, if class Fly didn't implement all abstract method in Animal
-//you must define class Fly as abstract class as well (current situation)
+//you must define class Fly as abstract class as well (like current situation)
 
 //And because fly is like an airplane, so it does make sense that it could implement an Airplane interface
 
@@ -13,7 +13,7 @@ public abstract class Fly extends Animal implements Airplane {
 
     public static final int LIFESPAN = 6;
 
-    //depends on different situation, constructor could be public or default method
+    //depends on different situation, constructor could be public or "no modifier" method
     public Fly() {
         super();
     }

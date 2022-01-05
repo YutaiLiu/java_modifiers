@@ -5,7 +5,7 @@ import MainKind.Frog;
 //To extend an abstract class, you have to implement all abstract method
 //and you can add new fields and non-abstract methods in sub-class
 
-public class GardenFrog extends Frog {
+public final class GardenFrog extends Frog {
 
     //constant class variable
     public static final String COLOR = "Green";
@@ -21,8 +21,8 @@ public class GardenFrog extends Frog {
     }
 
     //In the heritage chain, if multiple method have same name, same parameter and same return value
-    //that method is override again and again, when you calling the method, it refer to the last time of override
-    //Like here, if you call gardenFrogObj.getSpeed(), it will come here
+    //that method is override again and again, when you calling the method, it refer to the override in reference type
+    // Like here, if you call gardenFrogObj.getSpeed(), it will come here, if gardenFrogObj's reference type is GardenFrog
     //@Override annotation is optional but helpful
     @Override
     public int getSpeed() {
